@@ -3,15 +3,15 @@
 BUILD_DIR=$1
 
 export PATH=:/usr/local/bin:$PATH
-export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
+export PATH=$BUILD_DIR/.heroku/python/bin:$PATH:$HOME/.heroku/python/bin
 
 echo $PATH
 ls -al /tmp
 
 export PYTHONUNBUFFERED=true
 export PYTHONHOME=$BUILD_DIR/.heroku/python
-export LIBRARY_PATH=${LIBRARY_PATH:$BUILD_DIR/.heroku/vendor/lib}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:$BUILD_DIR/.heroku/vendor/lib}
+export LIBRARY_PATH=${LIBRARY_PATH:$BUILD_DIR/.heroku/python/lib}
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:$BUILD_DIR/.heroku/python/lib}
 export LANG=${LANG:-en_US.UTF-8}
 export PYTHONHASHSEED=${PYTHONHASHSEED:-random}
 export PYTHONPATH=$BUILD_DIR/.heroku/python/lib/python2.7
