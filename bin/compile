@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 BUILD_DIR=$1
 
+export PATH=:/usr/local/bin:$PATH
 export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
+
 echo $PATH
+ls -al /tmp
 export PYTHONUNBUFFERED=true
 export PYTHONHOME=$BUILD_DIR/.heroku/python
 export LIBRARY_PATH=${LIBRARY_PATH:-$BUILD_DIR/.heroku/vendor/lib}
