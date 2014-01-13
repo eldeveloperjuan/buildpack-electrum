@@ -1,0 +1,10 @@
+#!/bin/sh
+# bin/detect <build-dir>
+
+
+if [ -f $1/electrumed ]; then
+  echo "electrum detected!"
+  exit 0
+else
+  exit 1
+fi
