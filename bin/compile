@@ -1,17 +1,7 @@
 #!/usr/bin/env bash
 
-export PATH=$HOME/.heroku/python/bin:$PATH
-export PYTHONUNBUFFERED=true
-export PYTHONHOME=/app/.heroku/python
-export LIBRARY_PATH=${LIBRARY_PATH:-/app/.heroku/vendor/lib}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:-/app/.heroku/vendor/lib}
-export LANG=${LANG:-en_US.UTF-8}
-export PYTHONHASHSEED=${PYTHONHASHSEED:-random}
-export PYTHONPATH=${PYTHONPATH:-/app/}
-echo "-----> Preparing Variables"
-
 echo "-----> Installing electrum"
-/app/.heroku/python/bin/pip install https://download.electrum.org/Electrum-1.9.7.tar.gz#md5=5764f38d6e4bc287a577c8d16e797882
+.heroku/python/bin/pip install https://download.electrum.org/Electrum-1.9.7.tar.gz#md5=5764f38d6e4bc287a577c8d16e797882
 
 #touch "$1/electrumed"
 
