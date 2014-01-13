@@ -2,8 +2,9 @@
 
 BUILD_DIR=$1
 
+export HOME=$BUILD_DIR
 export PATH=:/usr/local/bin:$PATH
-export PATH=$BUILD_DIR/.heroku/python/bin:$PATH:$HOME/.heroku/python/bin
+export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
 
 echo $PATH
 ls -al /tmp
