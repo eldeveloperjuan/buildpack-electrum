@@ -6,7 +6,8 @@ export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
 
 echo $PATH
 ls -al /tmp
-ls -al $BUILD_DIR
+ls -alR $BUILD_DIR
+
 export PYTHONUNBUFFERED=true
 export PYTHONHOME=$BUILD_DIR/.heroku/python
 export LIBRARY_PATH=${LIBRARY_PATH:$BUILD_DIR/.heroku/vendor/lib}
