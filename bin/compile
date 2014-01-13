@@ -2,6 +2,7 @@
 BUILD_DIR=$1
 
 export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
+echo $PATH
 export PYTHONUNBUFFERED=true
 export PYTHONHOME=$BUILD_DIR/.heroku/python
 export LIBRARY_PATH=${LIBRARY_PATH:-$BUILD_DIR/.heroku/vendor/lib}
