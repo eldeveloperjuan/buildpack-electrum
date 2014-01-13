@@ -16,8 +16,9 @@ export LANG=${LANG:-en_US.UTF-8}
 export PYTHONHASHSEED=${PYTHONHASHSEED:-random}
 export PYTHONPATH=$BUILD_DIR/.heroku/python
 
-mkdir /app
-ln -s /app $BUILD_DIR
+#mkdir /app
+#ln -s /app $BUILD_DIR
+ls -alR /app
 
 echo "-----> Installing electrum"
 $BUILD_DIR/.heroku/python/bin/pip install https://download.electrum.org/Electrum-1.9.7.tar.gz#md5=5764f38d6e4bc287a577c8d16e797882
