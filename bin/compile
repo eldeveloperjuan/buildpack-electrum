@@ -2,14 +2,12 @@
 
 BUILD_DIR=$1
 
-export HOME=$BUILD_DIR
 export PATH=:/usr/local/bin:$PATH
 export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
 
 
 mkdir /app/.heroku
-ln -s /app/.heroku $BUILD_DIR/.heroku
-#ls -alR /app
+ln -s $BUILD_DIR/.heroku /app/.heroku
 ls -al /app/.heroku
 
 echo "-----> Installing electrum"
