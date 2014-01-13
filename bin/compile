@@ -6,22 +6,12 @@ export HOME=$BUILD_DIR
 export PATH=:/usr/local/bin:$PATH
 export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
 
-echo $PATH
-ls -al /tmp
-
-export PYTHONUNBUFFERED=true
-export PYTHONHOME=$BUILD_DIR/.heroku/python
-export LIBRARY_PATH=${LIBRARY_PATH:$BUILD_DIR/.heroku/python/lib}
-export LD_LIBRARY_PATH=${LD_LIBRARY_PATH:$BUILD_DIR/.heroku/python/lib}
-export LANG=${LANG:-en_US.UTF-8}
-export PYTHONHASHSEED=${PYTHONHASHSEED:-random}
-export PYTHONPATH=$BUILD_DIR/.heroku/python/lib/python2.7
 
 mkdir /app/.heroku
 ln -s /app/.heroku $BUILD_DIR/.heroku
 #ls -alR /app
+ls -al /app/.heroku
 
-cat $BUILD_DIR/.pip/pip.conf
 echo "-----> Installing electrum"
 $BUILD_DIR/.heroku/python/bin/pip install https://download.electrum.org/Electrum-1.9.7.tar.gz#md5=5764f38d6e4bc287a577c8d16e797882
 
