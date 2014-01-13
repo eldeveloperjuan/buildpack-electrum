@@ -7,7 +7,7 @@ export PATH=$BUILD_DIR/.heroku/python/bin:$PATH
 
 
 mkdir /app/.heroku
-ln -s $BUILD_DIR/.heroku/ /app/.heroku/
+ln -s $BUILD_DIR/.heroku/ /app/.heroku
 ls -al /app/.heroku
 
 echo "-----> Installing electrum"
