@@ -2,7 +2,7 @@
 # bin/detect <build-dir>
 
 if [ -f $1/electrumed ]; then
-  echo "Electrum Found"
+  echo "buildpack-electrum"
   exit 0
 else
   exit 1
