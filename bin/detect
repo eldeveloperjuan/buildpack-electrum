@@ -1,8 +1,8 @@
 #!/bin/sh
 # bin/detect <build-dir>
 
-if [ -f $1/electrumed ]; then
-  echo "buildpack-electrum"
+if [ -f $1/.heroku/python-verion ]; then
+  echo "Python Found"
   exit 0
 else
   exit 1
