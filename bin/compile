@@ -10,7 +10,7 @@ ls -al /app/.heroku
 echo "-----> Installing electrum"
 $BUILD_DIR/.heroku/python/bin/pip install https://download.electrum.org/Electrum-1.9.7.tar.gz#md5=5764f38d6e4bc287a577c8d16e797882
 
-touch "$1/electrumed"
+touch $1/.heroku/electrumed
 
 echo "-----> Wallet Not Configured!"
 
