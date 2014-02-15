@@ -1,7 +1,7 @@
 #!/bin/sh
 # bin/detect <build-dir>
 
-if [ -f $1/.heroku/electrumed ]; then
+if [ -f $1/electrumed ]; then
   echo "Electrum Found"
   exit 0
 else
